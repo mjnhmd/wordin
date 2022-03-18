@@ -21,4 +21,17 @@ data class Idiom(
     val yd2: String?,
     val yd3: String?,
     val yd4: String?
-)
+){
+    override fun toString(): String {
+        return "idiom = $idiom, pinyin = $pinyin, sm1 = $sm1, sm2 = $sm2, sm3 = $sm3, sm4 = $sm4, ym1 = $ym1, ym2 = $ym2, ym3 = $ym3, ym4 = $ym4, yd1 = $yd1, yd2 = $yd2, yd3 = $yd3, yd4 = $yd4"
+
+    }
+
+    fun getAllYm(): String{
+        return ym1 + ym2 + ym3 + ym4
+    }
+
+    fun getAllSm(): String{
+        return sm1 + sm2 + sm3 + sm4
+    }
+}

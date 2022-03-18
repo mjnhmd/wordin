@@ -10,6 +10,9 @@ interface IdiomDao {
     @Delete
      fun delete(idiom: Idiom)
 
+    @Query("SELECT * FROM idioms WHERE :string = idiom")
+    fun getIdiom(string: String): Idiom
+
     @Query("SELECT * FROM idioms LIMIT 10")
      fun getAll(): List<Idiom>
 
