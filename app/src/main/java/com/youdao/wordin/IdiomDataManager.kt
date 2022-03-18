@@ -10,9 +10,15 @@ class IdiomDataManager {
             IdiomDataManager() }
     }
 
+    val MIGRATION_1_2 = object : Migration(1, 2) {
+        override fun migrate(database: SupportSQLiteDatabase) {
+            // Empty implementation, because the schema isn't changing.
+        }
+    }
     var database: IdiomDatabase =
         Room.databaseBuilder(WordInApplication.instance, IdiomDatabase::class.java,"idioms.db")
-            .createFromAsset("idioms.db")
+            .createFromAsset("abcde.db")
+            .addMigrations(MIGRATION_1_2)
             .build()
 
 }

@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         initDataBase()
+//        initView()
     }
 
     private fun initDataBase(){
@@ -27,7 +28,7 @@ class MainActivity : AppCompatActivity() {
             word = withContext(Dispatchers.IO) {
                 IdiomDataManager.instance.database.getDao().getRandomIdiom()
             }
-            Log.d("MJNTEST", "getword   " + word?.char1)
+            Log.d("MJNTEST", "getword   " + word?.idiom)
             initView()
         }
     }
@@ -37,16 +38,17 @@ class MainActivity : AppCompatActivity() {
         if (word == null){
             adapter.setAnswer("国泰民安".toList())
         } else {
-            adapter.setAnswer((word!!.char1+word!!.char2+ word!!.char3+ word!!.char4).toList())
+            adapter.setAnswer((word!!.idiom).toList())
         }
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
         tv_renew.setOnClickListener {
             GlobalScope.launch(Dispatchers.Main) {
                 word = withContext(Dispatchers.IO) {
-                    IdiomDataManager.instance.database.getDao().getFirstIdiom()
+                    IdiomDataManager.instance.database.getDao().getRandomIdiom()
                 }
-                Log.d("MJNTEST", "getword   " + word?.char1)
+                adapter.setAnswer(word?.idiom?.toList())
+                Log.d("MJNTEST", "getword   " + word?.idiom)
             }
         }
         et_input.addTextChangedListener(object : TextWatcher{

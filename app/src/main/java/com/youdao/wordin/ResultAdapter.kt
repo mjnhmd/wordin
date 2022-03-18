@@ -12,9 +12,11 @@ class ResultAdapter: RecyclerView.Adapter<ResultAdapter.ResultViewHolder>() {
     var answer = emptyList<Char>().toMutableList()
     val data = emptyList<List<Char>>().toMutableList()
     @JvmName("setAnswer1")
-    fun setAnswer(list: List<Char>){
-        this.answer.clear()
-        this.answer.addAll(list)
+    fun setAnswer(list: List<Char>?){
+        list?.let {
+            this.answer.clear()
+            this.answer.addAll(list)
+        }
     }
     fun setData(list: List<Char>){
         if (list.size > 4){
