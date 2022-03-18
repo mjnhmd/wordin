@@ -7,8 +7,8 @@
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/ll_bg"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
         android:layout_gravity="center"
         android:gravity="center"
         android:background="@color/gray"
