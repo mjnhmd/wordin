@@ -40,6 +40,18 @@ data class Idiom(
         if (ym4 == "uen"){
             ym4 = "un"
         }
+        if (ym1 == "ian"){
+            ym1 = "an"
+        }
+        if (ym2 == "ian"){
+            ym2 = "an"
+        }
+        if (ym3 == "ian"){
+            ym3 = "an"
+        }
+        if (ym4 == "ian"){
+            ym4 = "an"
+        }
     }
 
     fun getAllYm(): String{
