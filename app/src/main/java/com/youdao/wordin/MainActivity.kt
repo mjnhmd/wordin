@@ -90,6 +90,8 @@ class MainActivity : AppCompatActivity() {
                 }
                 else -> {
                     Toast.makeText(this, "你干脆别玩了", Toast.LENGTH_SHORT).show()
+                    tv_answer.visibility = View.VISIBLE
+                    tv_answer.text = word?.idiom
                 }
             }
             tipCount++
@@ -115,5 +117,6 @@ class MainActivity : AppCompatActivity() {
         tv_word1.visibility = View.GONE
         tv_word2.visibility = View.GONE
         tv_word3.visibility = View.GONE
+        tv_answer.visibility = View.GONE
     }
 }

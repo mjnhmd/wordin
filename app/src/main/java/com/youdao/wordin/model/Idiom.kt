@@ -13,10 +13,10 @@ data class Idiom(
     val sm2: String?,
     val sm3: String?,
     val sm4: String?,
-    val ym1: String?,
-    val ym2: String?,
-    val ym3: String?,
-    val ym4: String?,
+    var ym1: String?,
+    var ym2: String?,
+    var ym3: String?,
+    var ym4: String?,
     val yd1: String?,
     val yd2: String?,
     val yd3: String?,
@@ -25,6 +25,21 @@ data class Idiom(
     override fun toString(): String {
         return "idiom = $idiom, pinyin = $pinyin, sm1 = $sm1, sm2 = $sm2, sm3 = $sm3, sm4 = $sm4, ym1 = $ym1, ym2 = $ym2, ym3 = $ym3, ym4 = $ym4, yd1 = $yd1, yd2 = $yd2, yd3 = $yd3, yd4 = $yd4"
 
+    }
+
+    init {
+        if (ym1 == "uen"){
+            ym1 = "un"
+        }
+        if (ym2 == "uen"){
+            ym2 = "un"
+        }
+        if (ym3 == "uen"){
+            ym3 = "un"
+        }
+        if (ym4 == "uen"){
+            ym4 = "un"
+        }
     }
 
     fun getAllYm(): String{

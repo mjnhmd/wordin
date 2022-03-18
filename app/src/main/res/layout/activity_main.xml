@@ -42,7 +42,9 @@
                 android:layout_width="80dp"
                 android:layout_height="40dp"
                 android:gravity="center"
-                android:text="提交" />
+                android:textColor="@color/white"
+                android:background="@drawable/bg_round_20_main"
+                android:text="确定" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -58,14 +60,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
+                android:textSize="18sp"
                 android:text="更新" />
-
             <TextView
                 android:id="@+id/tv_tip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="100dp"
                 android:layout_marginTop="18dp"
+                android:textSize="18sp"
                 android:text="提示" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -116,6 +119,15 @@
 
         <TextView
             android:id="@+id/tv_word3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="18dp"
+            android:text="提示"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_answer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="18dp"

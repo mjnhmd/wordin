@@ -103,7 +103,7 @@ class ResultAdapter: RecyclerView.Adapter<ResultAdapter.ResultViewHolder>() {
                     if (answerModel.sm == word.sm){
                         tv_sm.setTextColor(context.resources.getColor(R.color.right))
                     } else {
-                        if (answer!!.getAllSm().contains(word.sm ?: "!!!")){
+                        if (answer!!.sm1 == word.sm || answer!!.sm2 == word.sm || answer!!.sm3 == word.sm || answer!!.sm4 == word.sm){
                             tv_sm.setTextColor(context.resources.getColor(R.color.word))
                         } else {
                             tv_sm.setTextColor(context.resources.getColor(R.color.black))
@@ -112,7 +112,7 @@ class ResultAdapter: RecyclerView.Adapter<ResultAdapter.ResultViewHolder>() {
                     if (answerModel.ym == word.ym){
                         tv_ym.setTextColor(context.resources.getColor(R.color.right))
                     } else {
-                        if (answer!!.getAllYm().contains(word.ym ?: "!!!")){
+                        if (answer!!.ym1 == word.ym || answer!!.ym2 == word.ym || answer!!.ym3 == word.ym || answer!!.ym4 == word.ym){
                             tv_ym.setTextColor(context.resources.getColor(R.color.word))
                         } else {
                             tv_ym.setTextColor(context.resources.getColor(R.color.black))

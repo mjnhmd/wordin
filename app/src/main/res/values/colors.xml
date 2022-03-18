@@ -10,4 +10,5 @@
     <color name="right">#008B8B</color>
     <color name="word">#D2691E</color>
     <color name="gray">#E0E0E0</color>
+    <color name="dark_gray">#909090</color>
 </resources>
