@@ -119,9 +119,13 @@ class ResultAdapter: RecyclerView.Adapter<ResultAdapter.ResultViewHolder>() {
                         }
                     }
                     if (answerModel.yd == word.yd){
-                        tv_tone.setTextColor(context.resources.getColor(R.color.word))
+                        tv_tone.setTextColor(context.resources.getColor(R.color.right))
                     } else {
-                        tv_tone.setTextColor(context.resources.getColor(R.color.black))
+                        if (answer!!.yd1 == word.yd.toString() || answer!!.yd2 == word.yd.toString() || answer!!.yd3 == word.yd.toString() || answer!!.yd4 == word.yd.toString()){
+                            tv_tone.setTextColor(context.resources.getColor(R.color.word))
+                        } else {
+                            tv_tone.setTextColor(context.resources.getColor(R.color.black))
+                        }
                     }
                 }
             }
